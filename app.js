@@ -32,7 +32,9 @@ new Vue({
       this.registerLog(`${source} atingiu ${target} com ${hurt}.`, classCss);
     },
     healAndHurt() {
-      console.log('caa', this.alreadyUsedCure)
+      if (playerLife == 100) {
+        return;
+      }
       if (this.alreadyUsedCure == true) {
         this.registerLog('A cura só pode ser usada uma vez!');
         return;
