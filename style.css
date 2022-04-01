@@ -77,6 +77,7 @@ html {
   border-radius: 5px;
   text-transform: uppercase;
   font-size: 1.1rem;
+  border: none;
 }
 
 .new-game {
@@ -96,6 +97,11 @@ html {
 
 .heal {
   background-color: #259b34;
+  color: #fff;
+}
+
+.heal[data-disabled="true"] {
+  background-color: #259b3581;
   color: #fff;
 }
 
