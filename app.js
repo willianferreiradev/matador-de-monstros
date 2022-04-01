@@ -18,6 +18,7 @@ new Vue({
       this.monsterLife = 100;
       this.playerLife = 100;
       this.logs = [];
+      this.alreadyUsedCure = false;
     },
     attack(especial) {
       this.hurt('monsterLife', 5, 10, especial, 'Jogador', 'Monstro', 'player');
@@ -32,7 +33,7 @@ new Vue({
       this.registerLog(`${source} atingiu ${target} com ${hurt}.`, classCss);
     },
     healAndHurt() {
-      if (playerLife == 100) {
+      if (this.playerLife == 100) {
         return;
       }
       if (this.alreadyUsedCure == true) {
